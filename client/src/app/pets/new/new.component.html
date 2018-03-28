@@ -1,0 +1,61 @@
+
+<h2>Know of a pet needing a home?</h2>
+<!-- validations here -->
+<div>
+	<ul>
+		<form #form="ngForm" (submit)="addPet($event)">
+			<li><small id="red" *ngIf="!form.valid && form.touched">Form is not valid.</small></li>
+			<li><label>Name:  <small id="red" *ngIf="!name.valid && name.touched">Name is required and must have at least 3 characters.</small></label></li>
+			<li><input
+				name="newPet.name"
+		  		type="text"
+		  		required
+		  		minlength="3"
+		  		maxlength="30"
+		  		[(ngModel)]="newPet.name"
+		  		#name="ngModel"
+				/></li>
+			<li><label>Pet type:  <small id="red" *ngIf="!type.valid && type.touched">Type is required and must have at least 3 characters.</small></label></li>
+			<li><input
+				name="newPet.type"
+		  		type="text"
+		  		required
+		  		minlength="3"
+		  		maxlength="30"
+		  		[(ngModel)]="newPet.type"
+		  		#type="ngModel"
+				/></li>
+			<li><label>Description:  <small id="red" *ngIf="!description.valid && description.touched">Description is required and must have at least 3 characters.</small></label></li>
+			<li><input
+				name="newPet.description"
+		  		type="text"
+		  		required
+		  		minlength="3"
+		  		maxlength="30"
+		  		[(ngModel)]="newPet.description"
+		  		#description="ngModel"
+				/></li>
+			<li><label>Skills:</label></li>
+			<li><label>Skill 1</label>
+			<input
+				type="text"
+				name="skills.skill1"
+				[(ngModel)]="skills.skill1"
+			/></li>
+			<li><label>Skill 2</label>
+			<input
+				type="text"
+				name="skills.skill2"
+				[(ngModel)]="skills.skill2"
+			/></li>
+			<li><label>Skill 3</label>
+			<input
+				type="text"
+				name="skills.skill3"
+				[(ngModel)]="skills.skill3"
+			/></li>
+			<li><button type="submit" [disabled]="!form.valid" >Add Pet</button>
+			 <button [routerLink]="['/show']">Cancel</button></li>
+		</form>
+	</ul>
+</div>

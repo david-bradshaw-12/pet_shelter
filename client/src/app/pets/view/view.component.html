@@ -1,0 +1,15 @@
+<p>
+  view works!
+</p>
+<div>
+	<button [routerLink]="['/show']">Home</button>
+	<h2>Details about {{currentPet.name}}</h2>
+</div>
+<div>
+	<h3>{{currentPet.type}}</h3>
+	<h3>{{currentPet.description}}</h3>
+	<!-- <h3>{{currentPet}}</h3> -->
+	<button>Like this pet</button>
+	<button (click)="adoptPet($event, currentPet._id)">Adopt this pet!</button>
+</div>
+<!-- (delete) -->

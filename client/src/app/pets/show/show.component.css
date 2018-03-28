@@ -1,0 +1,22 @@
+*{
+	font-family: arial;
+	font-size: 20pt;
+}
+td{
+	padding: 15px;
+	border: 1px solid black;
+}
+th{
+	padding: 15px;
+	border: 1px solid black;
+}
+table{
+
+	border: 1px solid black;
+}
+div{
+	align-items: center;
+	text-align: center;
+	width: 1000px;
+	height: 500px;
+}
